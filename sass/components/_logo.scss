@@ -1,0 +1,22 @@
+.nav__logo {
+  font-family: $font-accept;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+
+  color: var(--color-primary);
+  transition: color 250ms var(--timing-function);
+}
+
+.current {
+  color: var(--color-action);
+
+  &:hover,
+  &:focus {
+    color: var(--background-color-even);
+  }
+}
+.nav__margin {
+  margin-right: 93px;
+}

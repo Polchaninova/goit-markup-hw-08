@@ -1,0 +1,35 @@
+.team_list_icon {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+}
+.teams_link_icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background-primary);
+
+  transition: background-color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-action);
+  }
+}
+
+.teams_icon {
+  fill: var(--color-fill-svg);
+  transition: fill 250ms var(--timing-function);
+
+  .teams_link_icon:hover &,
+  .teams_link_icon:focus & {
+    fill: var(--color-background-primary);
+  }
+}
+
+.team_item_icon:not(:last-of-type) {
+  margin-right: 10px;
+}

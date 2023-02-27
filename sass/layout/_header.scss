@@ -1,0 +1,115 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list__link {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  display: block;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms var(--timing-function);
+
+  // .current {
+  //   color: var(--color-action);
+  // }
+
+  &:hover,
+  &:focus {
+    color: var(--background-color-even);
+  }
+}
+.current {
+  color: var(--color-action);
+}
+
+.nav_link_menu.current.lineal::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-background-action);
+
+  /* transition: opacity 250ms var(--timing-function); */
+}
+
+.nav-list__item:not(:last-of-type) {
+  margin-right: 50px;
+}
+
+.header-contact {
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+  margin-left: auto;
+}
+.header-contact__email-img,
+.header-contact__tel-img {
+  margin-right: 10px;
+  fill: var(--color-text-deck);
+  transition: fill 250ms var(--timing-function);
+
+  .header-contact__link-email:hover &,
+  .header-contact__link-email:focus &,
+  .header-contact__link-tel:hover &,
+  .header-contact__link-tel:focus & {
+    fill: var(--color-action);
+  }
+}
+
+.header-contact__email {
+  margin-left: auto;
+}
+.header-contact__link-email {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.13;
+  letter-spacing: 0.02em;
+
+  color: var(--color-text-deck);
+  transition: color 250ms var(--timing-function);
+}
+.header-contact__tel {
+  margin-left: 30px;
+}
+.header-contact__link-tel {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.13;
+  letter-spacing: 0.02em;
+
+  color: var(--color-text-deck);
+  transition: color 250ms var(--timing-function);
+}
+.header-contact__link-tel:hover,
+.header-contact__link-email:hover,
+.header-contact__link-tel:focus,
+.header-contact__link-email:focus {
+  color: var(--background-color-even);
+}

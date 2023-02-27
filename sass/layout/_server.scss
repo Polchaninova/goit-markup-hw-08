@@ -1,0 +1,99 @@
+.server_menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+  flex-basis: calc((100% - 90px) / 3);
+}
+.server_item {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.server_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background-animation);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+}
+.server_card:hover .server_overlay {
+  transform: translateY(0);
+}
+
+.server_relative_img {
+  position: relative;
+  overflow: hidden;
+}
+
+.server_absolute_text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 63px 24px;
+}
+
+.server_text {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--color-background-primary);
+}
+
+.card_border {
+  padding: 20px 24px;
+
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-one);
+  border-top: none;
+
+  .server_card:hover &,
+  .server_card:focus & {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.server_card {
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.server_card .server_img,
+.server_card .card_border {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 0px 0px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.server_card:hover .server_img,
+.server_card:focus .server_img {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.server_menu_title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+.server_menu_descript {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text-deck);
+}
