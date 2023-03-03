@@ -864,15 +864,14 @@ img {
   background-color: var(--color-background-brand);
 }
 
-.teams_item {
-  background: var(--color-background-primary);
-}
 .teams_item:not(:last-of-type) {
   margin-bottom: 30px;
 }
 
 .team_member_card {
   width: 450px;
+  max-width: 100%;
+  height: auto;
   padding-top: 30px;
   padding-bottom: 24px;
   background: var(--color-background-primary);
@@ -906,7 +905,6 @@ img {
   .team_list {
     padding-left: 0;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
@@ -940,29 +938,23 @@ img {
 }
 .teams_photo {
   display: block;
-  width: 450px;
-  height: 460px;
+  max-width: 100%;
+  height: auto;
 }
-@media screen and (min-width: 768px) {
-  .teams_photo {
-    width: 354px;
-    height: 374px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .teams_photo {
-    width: 270px;
-    height: 260px;
-  }
-}
-
 .partner_list {
+  width: 480px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -30px;
 }
 
 .partner_item {
-  width: 170px;
+  width: 210px;
   height: 92px;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 120px) / 2);
 }
 
 .partner_link {
@@ -979,10 +971,6 @@ img {
   border: 1px solid var(--color-action);
 }
 
-.partner_item:not(:last-of-type) {
-  margin-right: 30px;
-}
-
 .partner_icon {
   width: 106px;
   height: 60px;
@@ -993,6 +981,24 @@ img {
   fill: var(--color-action);
 }
 
+@media screen and (min-width: 768px) {
+  .partner_item {
+    width: 226px;
+    flex-basis: calc((100% - 180px) / 3);
+  }
+  .partner_list {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .partner_list {
+    width: 1170px;
+    flex-wrap: nowrap;
+  }
+  .partner_item {
+    width: 170px;
+  }
+}
 .footer {
   padding: 60px 0;
   background-color: var(--color-background-second);
