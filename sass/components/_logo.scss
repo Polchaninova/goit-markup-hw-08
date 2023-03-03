@@ -1,7 +1,9 @@
 .nav__logo {
+  padding-top: 16px;
+
   font-family: $font-accept;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1;
   letter-spacing: 0.03em;
 
@@ -17,6 +19,16 @@
     color: var(--background-color-even);
   }
 }
-.nav__margin {
-  margin-right: 93px;
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    padding-top: 26px;
+
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
 }

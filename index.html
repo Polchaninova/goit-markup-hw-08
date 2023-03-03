@@ -48,6 +48,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu__btn-open js-open-menu">
+          <svg class="mobile-menu__svg-open" width="40px" height="40px">
+            <use href="./image/sprite.svg#menu_burger-open"></use>
+          </svg>
+        </button>
         <ul class="header-contact">
           <li class="header-contact__email">
             <a
@@ -70,6 +75,78 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__btn-close js-close-menu">
+            <svg class="mobile-menu__svg-close" width="40px" height="40px">
+              <use href="./image/sprite.svg#icon-close_modal"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-list__item">
+              <a
+                class="mobile-menu-list__link lineal current"
+                href="./index.html"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-menu-list__item">
+              <a class="mobile-menu-list__link" href="portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu-list__item">
+              <a class="mobile-menu-list__link" href="#">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu-contact">
+            <li class="mobile-menu-contact__tel">
+              <a class="mobile-menu-contact__link-tel" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu-contact__email">
+              <a
+                class="mobile-menu-contact__link-email"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu-social__list">
+            <li class="mobile-menu-social__item">
+              <a
+                href="https://www.instagram.com/"
+                class="mobile-menu-social__link mobile-menu-social__line"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile-menu-social__item">
+              <a
+                href="https://www.twitter.com/"
+                class="mobile-menu-social__link mobile-menu-social__line"
+                >Twitter</a
+              >
+            </li>
+            <li class="mobile-menu-social__item">
+              <a
+                href="https://www.facebook.com/"
+                class="mobile-menu-social__link mobile-menu-social__line"
+                >Facebook</a
+              >
+            </li>
+            <li class="mobile-menu-social__item">
+              <a
+                href="https://www.linkedin.com/"
+                class="mobile-menu-social__link"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -144,13 +221,32 @@
           <ul class="work-list">
             <li class="work-list__item">
               <div class="product">
-                <img
-                  class="product__picture"
-                  src="./image/code-on-tablet.jpg"
-                  alt="programming on tablet"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./image/work/work-colors.webp    1x,
+                      ./image/work/work-colors@2x.webp 2x
+                    "
+                    media="(min-width: 1200px )"
+                    type="image/webp"
+                  />
+
+                  <source
+                    srcset="
+                      ./image/work/work-colors.jpg 1x,
+                      ./image/work/work-colors@2x.jpg 2px
+                    "
+                    media="(min-width: 1200px )"
+                  />
+
+                  <img
+                    class="product__picture"
+                    src="./image/work/work-colors.jpg"
+                    alt="design app"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="product-title">
                   <h3 class="about-list__title product-title__title">
                     Десктопні додатки
@@ -160,13 +256,33 @@
             </li>
             <li class="work-list__item">
               <div class="product">
-                <img
-                  class="product__picture"
-                  src="./image/phone-on-laptop.jpg"
-                  alt="programming on laptop"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./image/work/work-mobile.webp    1x,
+                      ./image/work/work-mobile@2x.webp 2x
+                    "
+                    media="(min-width: 1200px )"
+                    type="image/webp"
+                  />
+
+                  <source
+                    srcset="
+                      ./image/work/work-mobile.jpg 1x,
+                      ./image/work/work-mobile@2x.jpg 2px
+                    "
+                    media="(min-width: 1200px )"
+                  />
+
+                  <img
+                    class="product__picture"
+                    src="./image/work/work-mobile.jpg"
+                    alt="mobile app"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+
                 <div class="product-title">
                   <h3 class="about-list__title product-title__title">
                     Мобільні додатки
@@ -176,13 +292,32 @@
             </li>
             <li class="work-list__item">
               <div class="product">
-                <img
-                  class="product__picture"
-                  src="./image/color-palette.jpg"
-                  alt="color palette"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./image/work/work-desktop.webp    1x,
+                      ./image/work/work-desktop@2x.webp 2x
+                    "
+                    media="(min-width: 1200px )"
+                    type="image/webp"
+                  />
+
+                  <source
+                    srcset="
+                      ./image/work/work-desktop.jpg 1x,
+                      ./image/work/work-desktop@2x.jpg 2px
+                    "
+                    media="(min-width: 1200px )"
+                  />
+
+                  <img
+                    class="product__picture"
+                    src="./image/work/work-desktop.jpg"
+                    alt="desktop app"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="product-title">
                   <h3 class="about-list__title product-title__title">
                     Дизайнерські рішення
@@ -193,7 +328,7 @@
           </ul>
         </div>
       </section>
-      <section class="teams section">
+      <!-- <section class="teams section">
         <div class="container">
           <h2 class="teams_title title">Наша команда</h2>
 
@@ -386,8 +521,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="partner section">
+      </section> -->
+      <!-- <section class="partner section">
         <div class="container">
           <h2 class="title">Постійні клієнти</h2>
           <ul class="partner_list">
@@ -435,10 +570,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container flex">
         <div class="footer-address">
           <a
@@ -527,9 +662,9 @@
           </button>
         </form>
       </div>
-    </footer>
+    </footer> -->
 
-    <div data-modal class="backdrop is-hidden">
+    <!-- <div data-modal class="backdrop is-hidden">
       <div class="modal">
         <button data-modal-close class="btn_close_modal">
           <svg class="modal_svg_close">
@@ -605,7 +740,8 @@
           <button class="btn_submit" type="submit">Відправити</button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
