@@ -1,3 +1,7 @@
+
+
+
+
 .footer {
   padding: 60px 0;
   background-color: var(--color-background-second);
@@ -14,17 +18,12 @@ address {
   font-style: normal;
 }
 
-// .nav__margin {
-//   margin-bottom: 20px;
-// }
+
+
+
 .footer-address_color-invert {
   color: var(--color-invert);
 
-  // font-family: $font-accept;
-  // font-weight: 700;
-  // font-size: 26px;
-  // line-height: 1;
-  // letter-spacing: 0.03em;
   &.current {
     color: var(--color-action);
   }

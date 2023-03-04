@@ -2,8 +2,8 @@
   width: 480px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  // margin-left: -30px;
+  // justify-content: center;
+  margin-left: -30px;
   margin-top: -30px;
   // justify-content: space-between;
 }
@@ -16,10 +16,6 @@
   flex-basis: calc((100% - 2 * 60px) / 2);
 }
 
-// .partner_item:not(:last-of-type) {
-//   margin-right: 30px;
-//   margin-bottom: 30px;
-// }
 .partner_link {
   width: 100%;
   height: 100%;
@@ -57,6 +53,7 @@
   }
   .partner_list {
     width: 720px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -66,5 +63,10 @@
   }
   .partner_item {
     width: 170px;
+    flex-basis: unset;
+  }
+  .partner_item:not(:last-of-type) {
+    // margin-left: 30px;
+    // margin-bottom: 30px;
   }
 }
