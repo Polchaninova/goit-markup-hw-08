@@ -1,11 +1,14 @@
 .services-list {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
   margin-bottom: 50px;
 }
 .services-list__item:not(:last-of-type) {
   margin-right: 10px;
+  margin-bottom: 15px;
 }
+
 .services-button {
   padding: 6px 26px;
   background: var(--color-background-brand);
@@ -29,4 +32,18 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
   }
+}
+@media screen and (min-width: 768px) {
+  .services-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+  }
+  .services-list__item:not(:last-of-type) {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
 }
