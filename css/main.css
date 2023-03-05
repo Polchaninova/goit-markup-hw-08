@@ -769,7 +769,7 @@ img {
   }
 }
 .about-list__feature {
-  width: 450px;
+  max-width: 450px;
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -951,7 +951,7 @@ img {
   height: auto;
 }
 .partner_list {
-  width: 480px;
+  max-width: 480px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
@@ -959,11 +959,11 @@ img {
 }
 
 .partner_item {
-  width: 210px;
+  max-width: 210px;
   height: 92px;
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc((100% - 120px) / 2);
+  flex-basis: calc((100% - 60px) / 2);
 }
 
 .partner_link {
@@ -992,16 +992,16 @@ img {
 
 @media screen and (min-width: 768px) {
   .partner_item {
-    width: 226px;
-    flex-basis: calc((100% - 180px) / 3);
+    max-width: 226px;
+    flex-basis: calc((100% - 90px) / 3);
   }
   .partner_list {
-    width: 720px;
-    justify-content: center;
+    max-width: 720px;
   }
 }
 @media screen and (min-width: 1200px) {
   .partner_list {
+    max-width: unset;
     width: 1170px;
     flex-wrap: nowrap;
   }
