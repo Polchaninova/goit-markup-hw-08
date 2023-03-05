@@ -14,6 +14,9 @@
 .mobile-menu {
   display: none;
 }
+.mobile-menu__btn-open {
+  display: none;
+}
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .mobile-menu__container {
     position: relative;
@@ -148,9 +151,6 @@
   // .mobile-menu {
   //   display: none;
   // }
-  .mobile-menu__btn-open {
-    display: none;
-  }
 
   .nav-list {
     display: flex;
