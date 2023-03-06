@@ -1,6 +1,8 @@
 .server_img {
   width: 450px;
   height: 294px;
+  max-width: 100%;
+  height: auto;
 }
 .server_menu {
   margin: 0 auto;
@@ -53,7 +55,6 @@
   background: var(--color-background-primary);
   border: 1px solid var(--color-border-one);
   border-top: none;
-
   .server_card:hover &,
   .server_card:focus & {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -94,16 +95,19 @@
 
   color: var(--color-text-deck);
 }
-
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .server_item {
+    flex-grow: 3;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 0px 0px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--color-border-one);
+  }
+}
 @media screen and (min-width: 768px) {
   .server_img {
     width: 354px;
   }
   .card_border {
     margin-bottom: 0;
-  }
-  .card__padding-border {
-    padding-bottom: 56px;
   }
   .server_menu {
     display: flex;
@@ -121,8 +125,8 @@
   .server_img {
     width: 370px;
   }
-    .card__padding-border {
-    padding-bottom: 20px;
+  .card__padding-border {
+    // padding-bottom: 20px;
   }
   .server_item {
     flex-basis: calc((100% - 90px) / 3);

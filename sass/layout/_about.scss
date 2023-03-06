@@ -11,8 +11,9 @@
 
 .feature {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   margin-bottom: 30px;
   height: 120px;
 
@@ -22,13 +23,15 @@
 
 .about-list__title {
   margin-bottom: 10px;
-  text-align: center;
 
   font-weight: 700;
   line-height: 1.3;
   text-transform: uppercase;
 
   color: var(--color-primary);
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .about-list__description {
   font-weight: 400;
