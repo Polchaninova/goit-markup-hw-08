@@ -89,19 +89,19 @@ img {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 448px;
+    width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 738px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
   }
 }
 .nav__logo,
@@ -417,14 +417,6 @@ img {
   display: none;
 }
 
-.mobile-menu {
-  display: none;
-}
-
-.mobile-menu__btn-open {
-  display: none;
-}
-
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .mobile-menu__container {
     position: relative;
@@ -435,6 +427,8 @@ img {
   .mobile-menu__btn-open,
   .mobile-menu__btn-close {
     padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     line-height: 0;
     background-color: transparent;
     border-color: transparent;
@@ -450,6 +444,8 @@ img {
   }
   .mobile-menu__btn-close {
     position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
     top: 10px;
     right: 15px;
   }
@@ -536,6 +532,12 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu__btn-open {
+    display: none;
+  }
   .nav-list {
     display: flex;
   }
@@ -612,7 +614,6 @@ img {
     color: var(--color-text-deck);
   }
   .header-contact__link-email {
-    padding-top: 32px;
     margin-bottom: 10px;
   }
 }
@@ -640,6 +641,9 @@ img {
     color: var(--background-color-even);
   }
   .header-contact__link-email {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 0;
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -721,7 +725,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .contact {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/change-4/contact-desktop-img.jpg);
   }
 }
@@ -732,7 +735,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .contact {
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/change-4/background-image-contact.jpg);
@@ -757,12 +759,16 @@ img {
   }
 }
 .about-list__feature {
-  max-width: 450px;
   font-size: 14px;
   letter-spacing: 0.03em;
 }
-.about-list__feature:not(:last-of-type) {
-  margin-bottom: 30px;
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .about-list__feature {
+    width: 450px;
+  }
+  .about-list__feature:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
 }
 
 .feature {
@@ -799,12 +805,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
-    margin-bottom: -30px;
+    margin-top: -30px;
   }
   .about-list__feature {
-    width: calc((100% - 60px) / 2);
+    flex-basis: calc((100% - 60px) / 2);
     margin-left: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -913,7 +919,7 @@ img {
   .teams_item {
     margin-left: 30px;
     margin-top: 30px;
-    width: calc((100% - 120px) / 2);
+    flex-basis: calc((100% - 60px) / 2);
   }
   .team_member_card {
     padding-top: 30px;
@@ -934,7 +940,7 @@ img {
     flex-wrap: nowrap;
   }
   .teams_item {
-    width: calc((100% - 120px) / 4);
+    flex-basis: calc((100% - 60px) / 4);
   }
 }
 .teams_photo {
@@ -951,7 +957,6 @@ img {
 }
 
 .partner_item {
-  max-width: 210px;
   height: 92px;
   margin-left: 30px;
   margin-top: 30px;
@@ -983,18 +988,16 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .partner_item {
-    max-width: 226px;
-    flex-basis: calc((100% - 90px) / 3);
-  }
   .partner_list {
-    max-width: 720px;
+    max-width: 768px;
+  }
+  .partner_item {
+    flex-basis: calc((100% - 90px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .partner_list {
-    max-width: unset;
-    width: 1170px;
+    max-width: 1200px;
     flex-wrap: nowrap;
   }
   .partner_item {
@@ -1205,6 +1208,6 @@ address {
     flex-direction: row;
   }
   .footer_form_btn {
-    margin-top: 34px;
+    margin-top: 92px;
   }
 }/*# sourceMappingURL=main.css.map */

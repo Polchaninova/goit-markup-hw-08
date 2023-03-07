@@ -61,7 +61,7 @@
   .teams_item {
     margin-left: 30px;
     margin-top: 30px;
-    width: calc((100% - 120px) / 2);
+    flex-basis: calc((100% - 60px) / 2);
   }
 
   .team_member_card {
@@ -83,7 +83,7 @@
     flex-wrap: nowrap;
   }
   .teams_item {
-    width: calc((100% - 120px) / 4);
+    flex-basis: calc((100% - 60px) / 4);
   }
 }
 
