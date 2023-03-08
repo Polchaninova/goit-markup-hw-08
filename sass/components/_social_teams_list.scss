@@ -18,8 +18,12 @@
   &:focus {
     background-color: var(--color-action);
   }
+  @media screen and (min-width: 0px) and (max-width: 245px) {
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+  }
 }
-
 .teams_icon {
   fill: var(--color-fill-svg);
   transition: fill 250ms var(--timing-function);

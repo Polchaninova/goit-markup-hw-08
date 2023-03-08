@@ -36,10 +36,10 @@
 
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a class="nav-list__link" href="./index.html">Студія</a>
+              <a class="nav-list__link lineal" href="./index.html">Студія</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link lineal current" href="portfolio.html"
+              <a class="nav-list__link current" href="portfolio.html"
                 >Портфоліо</a
               >
             </li>
@@ -48,7 +48,12 @@
             </li>
           </ul>
         </nav>
-        <button type="button" class="mobile-menu__btn-open js-open-menu">
+        <button
+          type="button"
+          class="mobile-menu__btn-open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg class="mobile-menu__svg-open" width="40px" height="40px">
             <use href="./image/sprite.svg#menu_burger-open"></use>
           </svg>
@@ -76,7 +81,8 @@
           </li>
         </ul>
       </div>
-      <div class="mobile-menu js-menu-container">
+
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
         <div class="container mobile-menu__container">
           <button type="button" class="mobile-menu__btn-close js-close-menu">
             <svg class="mobile-menu__svg-close" width="40px" height="40px">
@@ -88,16 +94,18 @@
               <a class="mobile-menu-list__link" href="./index.html">Студія</a>
             </li>
             <li class="mobile-menu-list__item">
-              <a class="mobile-menu-list__link" href="portfolio.html"
+              <a class="mobile-menu-list__link current" href="portfolio.html"
                 >Портфоліо</a
               >
             </li>
             <li class="mobile-menu-list__item">
-              <a class="mobile-menu-list__link" href="#">Контакти</a>
+              <a class="mobile-menu-list__link" href="#mobile-menu-contact"
+                >Контакти</a
+              >
             </li>
           </ul>
 
-          <ul class="mobile-menu-contact">
+          <ul class="mobile-menu-contact" id="mobile-menu-contact">
             <li class="mobile-menu-contact__tel">
               <a class="mobile-menu-contact__link-tel" href="tel:+380961111111">
                 +38 096 111 11 11</a
@@ -894,7 +902,7 @@
         <div class="footer-address">
           <a
             href="./index.html"
-            class="footer-address_color-invert nav__logo nav__margin"
+            class="footer-address_color-invert footer-address__nav-logo nav__margin"
             ><span class="current">Web</span>Studio</a
           >
 
@@ -902,7 +910,7 @@
             <ul class="footer-address__list">
               <li class="footer-address__item">
                 <a
-                  class="footer-address__link"
+                  class="footer-address__link footer-address__margin"
                   href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -911,13 +919,15 @@
               </li>
               <li class="footer-address__item">
                 <a
-                  class="footer-address__contact"
+                  class="footer-address__contact footer-address__margin"
                   href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
               <li class="footer-address__item">
-                <a class="footer-address__contact" href="tel:+380961111111"
+                <a
+                  class="footer-address__contact footer-address__margin"
+                  href="tel:+380961111111"
                   >+38 096 111 11 11</a
                 >
               </li>

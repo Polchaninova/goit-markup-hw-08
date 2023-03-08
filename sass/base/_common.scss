@@ -23,7 +23,16 @@ li {
 body {
   font-family: $font-primary;
   background-color: var(--primary-white-color);
+  &.is-open {
+    overflow: hidden;
+  }
 }
+//   @media screen and (max-width: 768px) {
+//     &.is-open {
+//       overflow: hidden;
+//     }
+//   }
+// }
 a {
   text-decoration: none;
 }

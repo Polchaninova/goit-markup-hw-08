@@ -48,7 +48,12 @@
             </li>
           </ul>
         </nav>
-        <button type="button" class="mobile-menu__btn-open js-open-menu">
+        <button
+          type="button"
+          class="mobile-menu__btn-open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg class="mobile-menu__svg-open" width="40px" height="40px">
             <use href="./image/sprite.svg#menu_burger-open"></use>
           </svg>
@@ -76,7 +81,8 @@
           </li>
         </ul>
       </div>
-      <div class="mobile-menu js-menu-container">
+
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
         <div class="container mobile-menu__container">
           <button type="button" class="mobile-menu__btn-close js-close-menu">
             <svg class="mobile-menu__svg-close" width="40px" height="40px">
@@ -86,7 +92,7 @@
           <ul class="mobile-menu-list">
             <li class="mobile-menu-list__item">
               <a
-                class="mobile-menu-list__link lineal current"
+                class="mobile-menu-list__link current"
                 href="./index.html"
                 >Студія</a
               >

@@ -58,6 +58,9 @@ body {
   font-family: "Roboto";
   background-color: var(--primary-white-color);
 }
+body.is-open {
+  overflow: hidden;
+}
 
 a {
   text-decoration: none;
@@ -106,11 +109,10 @@ img {
 }
 .nav__logo,
 .footer-address__nav-logo {
-  padding-top: 16px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--color-primary);
   transition: color 250ms var(--timing-function);
@@ -148,6 +150,13 @@ img {
 .teams_link_icon:hover, .teams_link_icon:focus {
   background-color: var(--color-action);
 }
+@media screen and (min-width: 0px) and (max-width: 245px) {
+  .teams_link_icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+  }
+}
 
 .teams_icon {
   fill: var(--color-fill-svg);
@@ -175,7 +184,26 @@ img {
   display: none;
 }
 
-@media screen and (min-width: 0px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  .mobile-menu-list__link.current {
+    color: var(--color-action);
+    transition: fill 250ms var(--timing-function);
+  }
+  .mobile-menu-list__link.current:hover .mobile-menu-list__link.current, .mobile-menu-list__link.current:focus .mobile-menu-list__link.current {
+    fill: var(--background-color-even);
+  }
+  .mobile-menu-list__link .current {
+    color: var(--color-action);
+    transition: fill 250ms var(--timing-function);
+  }
+  .mobile-menu-list__link .current:hover .mobile-menu-list__link.current, .mobile-menu-list__link .current:focus .mobile-menu-list__link.current {
+    fill: var(--background-color-even);
+  }
+  .header {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .mobile-menu__container {
     position: relative;
     padding-top: 48px;
@@ -185,8 +213,6 @@ img {
   .mobile-menu__btn-open,
   .mobile-menu__btn-close {
     padding: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
     line-height: 0;
     background-color: transparent;
     border-color: transparent;
@@ -202,20 +228,19 @@ img {
   }
   .mobile-menu__btn-close {
     position: absolute;
-    margin-top: 0;
-    margin-bottom: 0;
     top: 10px;
     right: 15px;
   }
   .mobile-menu {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    overflow: auto;
+    overflow-y: scroll;
     background-color: #fff;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -230,7 +255,8 @@ img {
     transform: scale(0.9) translate(-50%, -50%);
   }
   .mobile-menu-list {
-    margin-bottom: 300px;
+    position: relative;
+    margin-bottom: 108%;
   }
   .mobile-menu-list__item:not(:last-child) {
     margin-bottom: 32px;
@@ -256,6 +282,13 @@ img {
     display: flex;
     align-items: flex-end;
   }
+}
+@media screen and (max-width: 767px) and (max-width: 450px) {
+  .mobile-menu-social__list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
   .mobile-menu-contact__link-tel {
     font-weight: 500;
     font-size: 34px;
@@ -263,12 +296,16 @@ img {
     letter-spacing: 0.02em;
     color: #2196f3;
   }
+}
+@media screen and (max-width: 767px) {
   .mobile-menu-contact__link-email {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.2;
     color: #757575;
   }
+}
+@media screen and (max-width: 767px) {
   .mobile-menu-social__link {
     width: 357px;
     font-weight: 500;
@@ -277,18 +314,31 @@ img {
     letter-spacing: 0.02em;
     color: #2196f3;
   }
+}
+@media screen and (max-width: 767px) {
   .mobile-menu-social__item:not(:last-child) {
     margin-right: 10px;
   }
-  .mobile-menu-social__line::after {
-    content: "";
-    margin-left: 10px;
-    width: 22px;
-    height: 0;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    transform: rotate(90deg);
+}
+@media screen and (max-width: 767px) and (max-width: 450px) {
+  .mobile-menu-social__item:not(:last-child) {
+    margin-right: 5px;
   }
 }
+.mobile-menu-social__line::after {
+  content: "";
+  margin-left: 10px;
+  width: 22px;
+  height: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 450px) {
+  .mobile-menu-social__line::after {
+    margin-left: 5px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
@@ -611,7 +661,7 @@ img {
   padding-top: 0;
   display: block;
 }
-@media screen and (min-width: 0px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer-address__nav-logo {
     text-align: center;
   }
