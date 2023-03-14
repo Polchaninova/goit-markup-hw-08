@@ -38,9 +38,10 @@
   @media screen and (max-width: 450px) {
     padding: 40px 20px 40px 20px;
     width: 320px;
-    height: 609px;
+    height: 568px;
   }
 }
+
 .btn_close_modal {
   position: absolute;
   top: 8px;
@@ -74,6 +75,7 @@
 .form {
   font-family: $font-primary;
 }
+
 .modal_call_action {
   display: block;
   margin-bottom: 12px;
@@ -84,11 +86,17 @@
   line-height: 1.15;
   letter-spacing: 0.03em;
   color: var(--color-primary);
+
+  @media screen and (max-width: 450px) {
+    font-size: 15px;
+  }
 }
+
 .form_label {
   display: block;
   margin-bottom: 10px;
 }
+
 .form_text_label {
   margin-bottom: 4px;
   display: block;
@@ -135,7 +143,7 @@
   fill: (--color-primary);
   transition: fill 250ms var(--timing-function);
 
-  .form_input:focus + & {
+  .form_input:focus+& {
     fill: var(--color-action);
   }
 }
@@ -174,6 +182,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /* div */
 .form_checkbox_wrapper {
   display: flex;
@@ -183,6 +192,7 @@
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
 /* create custom checkbox */
 .label_policy::before {
   content: " ";
@@ -197,11 +207,11 @@
   transition: border-color 250ms var(--timing-function);
 }
 
-.checkbox:focus + .label_policy::before {
+.checkbox:focus+.label_policy::before {
   border-color: var(--color-action);
 }
 
-.checkbox:checked + .label_policy::before {
+.checkbox:checked+.label_policy::before {
   background-color: var(--color-action);
   background-image: url("../image/icon_check.svg");
   background-repeat: no-repeat;
@@ -244,14 +254,18 @@
     border-color 250ms var(--timing-function),
     box-shadow 250ms var(--timing-function);
 
+  @media screen and (max-width:450px) {
+    padding: 5px 42px;
+  }
+
   &:hover,
   &:focus {
     background-color: var(--background-color-even);
   }
 }
+
 @media screen and (min-width: 768px) {
-  .modal {
-  }
+  .modal {}
 }
 
 @media screen and (min-width: 1200px) {
